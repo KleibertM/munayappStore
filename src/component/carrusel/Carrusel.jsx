@@ -33,6 +33,7 @@ const Carrusel = () => {
                                     objectFit={'cover'}
                                     h={{base: '230px', md: '500px'}}
                                     w={{base: 'auto', md: '100%'}}
+                                    loading='lazy'
                                 />
                             </Box>
                         ))}

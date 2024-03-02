@@ -18,6 +18,7 @@ const Items = ({image, title, text, diretionY, diretionX, idTema}) => {
                 w={'100%'}
                 objectFit={'cover'}
                 name={title}
+                loading='lazy'
                 />
             </Flex>
             <Flex flexDirection={'column'} align={'center'} justify={'center'} gap={[2, 6]} >

@@ -1,5 +1,5 @@
-import { Flex, Image, Text, Avatar, keyframes } from '@chakra-ui/react'
-import { PiAlienFill, PiFlyingSaucerFill } from "react-icons/pi";
+import { Flex, Text, keyframes } from '@chakra-ui/react'
+import {  PiFlyingSaucerFill } from "react-icons/pi";
 const animation = keyframes
     `from {
     opacity: 0

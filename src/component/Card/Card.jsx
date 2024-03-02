@@ -1,15 +1,18 @@
 import {
-    Flex, Box, Image, Text, Button, Select, useToast
+    Flex, Box, Text, 
 } from '@chakra-ui/react'
-import { useCart } from '../../hook/cartHook';
-import { useState } from 'react';
-import ImageRender from './ImageRender';
+// import ImageRender from './ImageRender';
+import {Link} from 'react-router-dom'
+import BtnAddToCart from '../btn/BtnAddToCart';
+import { lazy } from 'react';
 
+
+const ImageRender = lazy(()=> import('./ImageRender'))
+ 
 const CardComponent = ({ dataItem }) => {
     const { id, nombre, descripcion, image, precio, ingredientes, estado } = dataItem
-    const toast = useToast()
-    const [quantity, setQuantity] = useState(12);
-    const { addToCart } = useCart()
+    
+    
 
     return (
         <>
@@ -24,71 +27,46 @@ const CardComponent = ({ dataItem }) => {
                     borderRadius={10}
                     overflow={'hidden'}
                 >
-                    < ImageRender image={image} name={nombre} wImg={'auto'} hImg={'330px'} />
-                    <Flex justify={'space-between'}
-                        align={'center'}
-                        position={'absolute'}
-                        bottom={0}
-                        left={0}
-                        paddingX={2}
-                        w={'100%'}
-                        color={'white'}
-                        h={'50px'}
-                        backdropFilter='auto' backdropBlur='12px'
-                        gap={2}
-                    >
-                        <Text textOverflow={'ellipsis'}
-                            whiteSpace={'nowrap'}
-                            fontWeight={'bold'}
-                            textShadow={'0 5px 10px #000'}
-                            maxWidth={'2rem'}
-                        >
-                            {nombre}
-                        </Text>
-
-                        <Text bg={'#58D68D'}
-                            borderRadius={20}
+                    <Link to={`/detail/${id}`}>
+                        < ImageRender image={image} name={nombre} wImg={'auto'} hImg={'330px'} />
+                        <Flex justify={'space-between'}
+                            align={'center'}
+                            position={'absolute'}
+                            bottom={0}
+                            left={0}
                             paddingX={2}
-                            fontWeight={'bold'}
-                            textOverflow={'ellipsis'}
-                            whiteSpace={'nowrap'}
-                            h={['25px', 'auto']}
-                            justifyItems={'center'}
-                            textAlign={'center'}>
-                            s/ {precio}
-                        </Text>
+                            w={'100%'}
+                            color={'white'}
+                            h={'50px'}
+                            backdropFilter='auto' backdropBlur='12px'
+                            gap={2}
+                        >
+                            <Text textOverflow={'ellipsis'}
+                                whiteSpace={'nowrap'}
+                                fontWeight={'bold'}
+                                textShadow={'0 5px 10px #000'}
+                                maxWidth={'2rem'}
+                            >
+                                {nombre}
+                            </Text>
 
-                    </Flex>
+                            <Text bg={'#58D68D'}
+                                borderRadius={20}
+                                paddingX={2}
+                                fontWeight={'bold'}
+                                textOverflow={'ellipsis'}
+                                whiteSpace={'nowrap'}
+                                h={['25px', 'auto']}
+                                justifyItems={'center'}
+                                textAlign={'center'}>
+                                s/ {precio}
+                            </Text>
+
+                        </Flex>
+                    </Link>
                 </Box>
                 <Flex gap={2} justify={'space-around'} w={['10rem', '250px']}>
-                    <Select
-                        w={['5rem', 'auto']}
-                        value={quantity}
-                        onChange={(e) => setQuantity(parseInt(e.target.value))} // Actualizar la cantidad seleccionada 
-                    >
-                        {[...Array(200).keys()].map((number) => (
-                            <option
-                                key={number + 1}
-                                value={number + 1}
-                            >
-                                {number + 1}
-                            </option>
-                        ))}
-                    </Select>
-                    <Button bg={'#2E4053'} color={'white'}
-                        onClick={() => {
-                            const productWithQuantity = { ...dataItem, quantity }; // Agregar la cantidad seleccionada al producto
-                            addToCart(productWithQuantity); // Llamar a addToCart con el producto actualizado
-                            toast({
-                                title: 'Agregaste al Carrito.',
-                                description: "Se agrego al carrito.",
-                                status: 'success',
-                                duration: 1000,
-                                isClosable: true,
-                            });
-                        }}>
-                        Comprar
-                    </Button>
+                    < BtnAddToCart  dataItem={dataItem} />
                 </Flex>
             </Flex>
         </>

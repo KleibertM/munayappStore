@@ -1,6 +1,11 @@
-import Contact from "../contact/Contact"
+// import Contact from "../contact/Contact"
+// import BannerText from '../bannerText/BannerText';
 import { PiPlanetFill } from "react-icons/pi";
-import BannerText from '../bannerText/BannerText';
+import { lazy, Suspense } from 'react';
+
+
+const Contact = lazy(()=> import('../contact/Contact'))
+const BannerText = lazy(()=> import('../bannerText/BannerText'))
 
 const Footer = () => {
     return (

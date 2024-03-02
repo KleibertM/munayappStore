@@ -9,6 +9,7 @@ const Contact = () => {
                 <Flex flexDirection={'column'}paddingY={4}>
                     <Image
                         src='https://res.cloudinary.com/dzd6hfguw/image/upload/v1709341195/samples/Munay_oshrbl.jpg'
+                        loading='lazy'
                     />
                     <Flex flexWrap={'nowrap'} align={'center'} justify={'center'} gap={4}>
                         <BtnLink icon={<PiEnvelopeSimpleOpenFill />} link={'#'} />

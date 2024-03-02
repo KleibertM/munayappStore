@@ -1,6 +1,4 @@
-import {
-    Flex, Box, Image, Text, Button, Select, useToast
-} from '@chakra-ui/react'
+import { Image, } from '@chakra-ui/react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

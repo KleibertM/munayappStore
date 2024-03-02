@@ -1,5 +1,9 @@
 import { Tabs, TabList, TabPanels, Tab, TabPanel, Heading } from '@chakra-ui/react'
-import CardsContent from '../Cards/Cards'
+// import CardsContent from '../Cards/Cards'
+import { lazy, Suspense } from 'react';
+
+const CardsContent = lazy(()=> import('../Cards/Cards'))
+
 
 const TabsNav = () => {
 

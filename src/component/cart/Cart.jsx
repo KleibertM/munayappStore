@@ -1,6 +1,6 @@
 
 import { useCart } from '../../hook/cartHook'
-import CartNull from './cartNull'
+import CartNull from './CartNull'
 import { BsTrash, BsXCircle, BsWhatsapp } from "react-icons/bs";
 import {
     Table,
@@ -27,6 +27,7 @@ import {
 } from "@chakra-ui/react";
 import Swal from 'sweetalert2'
 import { useEffect } from 'react';
+
 
 const Cart = () => {
     const { cart, total, cartRemove, cleanCart, decrementQuantity,
@@ -60,7 +61,7 @@ const Cart = () => {
         const message = `¡Hola! Me gustaría comprar los siguientes Marcianos:\n\n${cart
             .map((book) => `Marcianos: ${book.nombre} - S/${book.precio} Cant: ${book.quantity} 
                 `)
-            .join("\n")}\n\n Total: ${total} soles\n ¿Podrías ayudarme con la compra?`;
+            .join("\n")}\n\n Total: ${totalAcortado} soles\n ¿Podrías ayudarme con la compra?`;
 
         const formattedMessage = encodeURIComponent(message);
         const whatsappURL = `https://api.whatsapp.com/send?phone=51976963819&text=${formattedMessage}`;
@@ -178,7 +179,7 @@ const Cart = () => {
                                                             </Text>
                                                         </Flex>
                                                     </Td>
-                                                    <Td  w={["auto", "10rem"]}> S/{book.precio} </Td>
+                                                    <Td  w={["auto", "10rem"]} color={'green'} fontWeight={'bold'}> s/{book.precio} </Td>
                                                     <Td>
                                                         <Button
                                                             bg='none'

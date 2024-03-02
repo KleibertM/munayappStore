@@ -2,11 +2,15 @@ import style from './App.module.css'
 import Navbar from './component/Navbar/Navbar'
 import { Routes, Route } from 'react-router-dom'
 import Cart from './component/cart/Cart'
+import DetailCards from './component/Card/DetailCards'
+import Footer from './component/footer/Footer'
 import Home from './component/home/Home'
 import { CartProvider } from './context/cartContext'
 import BtnWhatsapp from './component/whatsapp/BtnWhatsApp'
-import Contact from './component/contact/Contact'
-import Footer from './component/footer/Footer'
+
+// const Cart = lazy(()=> import('./component/cart/Cart'))
+// const Footer = lazy(()=> import('./component/footer/Footer'))
+
 
 function App() {
 
@@ -19,6 +23,7 @@ function App() {
       <Routes>
         <Route path='/' element={<Home />} />
         <Route path='/cart' element={<Cart />} /> 
+        <Route path='/detail/:id' element={<DetailCards/>} /> 
       </Routes>
         </div>
         <BtnWhatsapp />

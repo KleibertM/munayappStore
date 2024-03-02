@@ -1,8 +1,13 @@
 import Banner from "../Banner/Banner";
-import Items from "../Items/Items";
-import TabsNav from "../Tabs/TabsNav";
-import BannerText from "../bannerText/BannerText";
+// import Items from "../Items/Items";
+// import BannerText from "../bannerText/BannerText";
+// import TabsNav from "../Tabs/TabsNav";
 import { PiAlienFill, PiFlyingSaucerDuotone } from "react-icons/pi";
+import { lazy, Suspense } from 'react';
+
+const Items = lazy(()=> import("../Items/Items"))
+const BannerText = lazy(()=> import("../bannerText/BannerText"))
+const TabsNav = lazy(()=> import("../Tabs/TabsNav"))
 
 const Home = () => {
     return (
