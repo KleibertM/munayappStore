@@ -122,11 +122,11 @@ const Cart = () => {
     }
     return (
         <>
-            <Flex flexDirection={"column"} w={'100%'} justify={'center'} align={'center'}>
+            <Flex flexDirection={"column"} w={'100%'} justify={'flex-start'} align={'center'} h={'90vh'}>
                 {cart.length ? (
                     <>
                         <Heading fontSize={"1.3rem"} marginLeft={'1rem'}>Nave de Compras</Heading>
-                        <Flex>
+                        <Flex >
                             <TableContainer>
                                 <Table size={["sm", 'lg']}>
                                     <Thead>
@@ -213,7 +213,7 @@ const Cart = () => {
                                                 <Text fontWeight={'bold'} >Total</Text>
                                             </Td>
                                             <Td>
-                                                <Text color={'green'} fontWeight={'semibold'}  >  {totalAcortado} </Text>
+                                                <Text color={'green'} fontWeight={'bold'}  >  {totalAcortado} </Text>
                                             </Td>
                                             <Td>
                                                 soles
@@ -240,7 +240,7 @@ const Cart = () => {
                                 gap={2}
                                 w={['220px', '220px']}
                             >
-                                Concretar Pedido en
+                                Pagar Pedido en
                                 <Text fontSize={'1.3rem'}>
                                     <BsWhatsapp />
                                 </Text>

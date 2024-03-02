@@ -14,14 +14,14 @@ const CartNull = () => {
     const myAnimate = ` ${animation} both 1s`
     return (
         <>
-            <Flex flexDirection={'column'} align={'center'} justify={'center'} gap={4} animation={myAnimate}>
+            <Flex flexDirection={'column'} align={'center'} justify={'center'} gap={4} animation={myAnimate} h={'90vh'}>
 
                 <Text fontSize={['20rem', 'auto']} 
-                color={'green.500'}>
+                color={'#58D68D'}>
                     <PiFlyingSaucerFill />
                 </Text>
                 <Text fontSize={'1.5rem'} fontWeight={'bold'}>
-                    ¡No tienes productos en la nave!
+                    ¡No tienes marcianos en la nave!
                 </Text>
             </Flex>
         </>

@@ -5,6 +5,8 @@ import Cart from './component/cart/Cart'
 import Home from './component/home/Home'
 import { CartProvider } from './context/cartContext'
 import BtnWhatsapp from './component/whatsapp/BtnWhatsApp'
+import Contact from './component/contact/Contact'
+import Footer from './component/footer/Footer'
 
 function App() {
 
@@ -20,6 +22,7 @@ function App() {
       </Routes>
         </div>
         <BtnWhatsapp />
+        <Footer />
       </div>
     </CartProvider>
     </>

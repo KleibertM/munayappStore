@@ -68,7 +68,7 @@ const CardComponent = ({ dataItem }) => {
                             {nombre}
                         </Text>
 
-                        <Text bg={'green.500'}
+                        <Text bg={'#58D68D'}
                             borderRadius={20}
                             paddingX={2}
                             fontWeight={'bold'}
@@ -97,7 +97,7 @@ const CardComponent = ({ dataItem }) => {
                             </option>
                         ))}
                     </Select>
-                    <Button bg={'green.300'} color={'white'}
+                    <Button bg={'#2E4053'} color={'white'}
                         onClick={() => {
                             const productWithQuantity = { ...dataItem, quantity }; // Agregar la cantidad seleccionada al producto
                             addToCart(productWithQuantity); // Llamar a addToCart con el producto actualizado

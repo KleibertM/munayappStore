@@ -22,12 +22,12 @@ const Sidebar = () => {
   const btnRef = useRef()
   return (
     <>
-      <Button ref={btnRef} bg={'blue.500'} borderRadius={50} onClick={onOpen}
+      <Button ref={btnRef} bg={'#2E4053'} borderRadius={50} onClick={onOpen}
         h={['40px', '60px']}
         w={['40px', '60px']}>
         <Text
           fontSize={'2rem'}
-          color={'white'}>
+          color={'#58D68D'}>
           <PiAlienFill />
         </Text>
       </Button>
