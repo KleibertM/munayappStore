@@ -1,0 +1,28 @@
+#root {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  background: #FFF;
+}
+
+.app_container {
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Opcional: Establece una altura completa para la aplicación */
+}
+
+.main_content {
+  margin-top: 80px; /* Ajusta este valor según la altura de tu Navbar */
+  /* padding-top: 20px;  */
+  /* Opcional: Si prefieres relleno en lugar de margen */
+  flex: 1; /* Asegura que el contenido principal ocupe todo el espacio restante */
+}
+
+@media (max-width: 660px) {
+  .main_content {
+    margin-top: 60px; /* Ajusta este valor según la altura de tu Navbar */
+    /* padding-top: 20px;  */
+    /* Opcional: Si prefieres relleno en lugar de margen */
+    flex: 1; /* Asegura que el contenido principal ocupe todo el espacio restante */
+  }
+}
