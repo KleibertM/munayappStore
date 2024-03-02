@@ -11,18 +11,19 @@ export function CartProvider({ children }) {
 
         if (productInCartIndex >= 0) {
             const newCart = [...cart]; // Crear una copia del carrito actual
-            newCart[productInCartIndex].quantity = product.quantity; // Incrementar la cantidad del producto existente
+            newCart[productInCartIndex].quantity += product.quantity; // Incrementar la cantidad del producto existente
             const newTotal = calculateTotal(newCart); // Calcular el nuevo total
             setTotal(newTotal); // Actualizar el estado total
             setCart(newCart); // Actualizar el carrito
             localStorage.setItem('cart', JSON.stringify(newCart));
             localStorage.setItem('total', JSON.stringify(newTotal));
         } else {
-            const newProduct = { ...product, quantity: product.quantity }; // Crear un nuevo objeto de producto con una cantidad inicial de 1
+            const newProduct = { ...product }; // Crear un nuevo objeto de producto con una cantidad inicial de 1
+            const newTotal = total + (product.precio * product.quantity);
+            setTotal(newTotal); // Actualizar el total sumando el precio del nuevo producto
             setCart([...cart, newProduct]); // Agregar el nuevo producto al carrito
-            setTotal(total + product.precio); // Actualizar el total sumando el precio del nuevo producto
             localStorage.setItem('cart', JSON.stringify([...cart, newProduct]));
-            localStorage.setItem('total', JSON.stringify(total + product.precio));
+            localStorage.setItem('total', JSON.stringify(newTotal));
         }
         // localStorage.setItem('carrito', JSON.stringify(cart));
         console.log(cart);

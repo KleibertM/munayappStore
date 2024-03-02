@@ -1,11 +1,9 @@
 import {
     Flex, Box, Image, Text, Button, Select, useToast
 } from '@chakra-ui/react'
-import Slider from "react-slick";
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 import { useCart } from '../../hook/cartHook';
 import { useState } from 'react';
+import ImageRender from './ImageRender';
 
 const CardComponent = ({ dataItem }) => {
     const { id, nombre, descripcion, image, precio, ingredientes, estado } = dataItem
@@ -13,15 +11,6 @@ const CardComponent = ({ dataItem }) => {
     const [quantity, setQuantity] = useState(12);
     const { addToCart } = useCart()
 
-    const settings = {
-        dots: true,
-        infinite: true,
-        speed: 3000,
-        slidesToShow: 1,
-        slidesToScroll: 1,
-        autoplay: true,
-        autoplaySpeed: 5000,
-    };
     return (
         <>
             <Flex flexDirection={'column'} gap={2}
@@ -30,25 +19,12 @@ const CardComponent = ({ dataItem }) => {
                 >
                 <Box
                     h={['auto', '350px']}
-                    w={['auto', '250px']}
+                    w={['10rem', '250px']}
                     position={'relative'}
                     borderRadius={10}
                     overflow={'hidden'}
                 >
-                    <Slider {...settings}>
-                        {image.map((img, index) => (
-                            <Image
-                                key={index}
-                                src={img}
-                                name={nombre}
-                                h={'350px'}
-                                w={'auto'}
-                                borderRadius={10}
-                                overflow={'hidden'}
-                                loading='lazy'
-                            />
-                        ))}
-                    </Slider>
+                    < ImageRender image={image} name={nombre} wImg={'auto'} hImg={'330px'} />
                     <Flex justify={'space-between'}
                         align={'center'}
                         position={'absolute'}
@@ -59,11 +35,13 @@ const CardComponent = ({ dataItem }) => {
                         color={'white'}
                         h={'50px'}
                         backdropFilter='auto' backdropBlur='12px'
+                        gap={2}
                     >
                         <Text textOverflow={'ellipsis'}
                             whiteSpace={'nowrap'}
                             fontWeight={'bold'}
                             textShadow={'0 5px 10px #000'}
+                            maxWidth={'2rem'}
                         >
                             {nombre}
                         </Text>
@@ -82,7 +60,7 @@ const CardComponent = ({ dataItem }) => {
 
                     </Flex>
                 </Box>
-                <Flex gap={2} justify={'space-around'}>
+                <Flex gap={2} justify={'space-around'} w={['10rem', '250px']}>
                     <Select
                         w={['5rem', 'auto']}
                         value={quantity}
