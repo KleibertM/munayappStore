@@ -1,6 +1,6 @@
 
 import { useCart } from '../../hook/cartHook'
-import CartNull from './CartNull'
+import CartNull from './cartNull'
 import { BsTrash, BsXCircle, BsWhatsapp } from "react-icons/bs";
 import {
     Table,
