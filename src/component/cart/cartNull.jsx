@@ -14,7 +14,7 @@ const CartNull = () => {
     const myAnimate = ` ${animation} both 1s`
     return (
         <>
-            <Flex flexDirection={'column'} align={'center'} justify={'center'} gap={4} animation={myAnimate} h={'90vh'}>
+            <Flex flexDirection={'column'} align={'center'} justify={'center'} gap={4} animation={myAnimate} h={'80vh'}>
 
                 <Text fontSize={['20rem', 'auto']} 
                 color={'#58D68D'}>
