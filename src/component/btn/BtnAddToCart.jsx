@@ -16,12 +16,12 @@ const BtnAddToCart = ({ dataItem }) => {
                     value={quantity}
                     onChange={(e) => setQuantity(parseInt(e.target.value))} // Actualizar la cantidad seleccionada 
                 >
-                    {[...Array(200).keys()].map((number) => (
+                    {[...Array(189).keys()].map((number) => (
                         <option
-                            key={number + 1}
-                            value={number + 1}
+                            key={number + 12}
+                            value={number + 12}
                         >
-                            {number + 1}
+                            {number + 12}
                         </option>
                     ))}
                 </Select>
