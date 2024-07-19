@@ -29,6 +29,7 @@ const ImageRender = ({ image, name, wImg, hImg }) => {
                         overflow={'hidden'}
                         objectFit={'cover'}
                         loading='lazy'
+                        alt={name}
                     />
                 ))}
             </Slider>

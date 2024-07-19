@@ -8,6 +8,7 @@ const BtnLink = ({link, icon}) => {
                     w={['40px', '50px']}
                     alignContent={'center'}
                     justifyContent={'center'}
+                    name='enlace social'
                     >
                         <Text fontSize={'2rem'} color={'#fff'}>
                             {icon}

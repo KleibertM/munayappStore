@@ -12,6 +12,7 @@ const BtnAddToCart = ({ dataItem }) => {
         <>
             <Flex gap={2}>
                 <Select
+                    name="elegir cantidad"
                     w={['5rem', 'auto']}
                     value={quantity}
                     onChange={(e) => setQuantity(parseInt(e.target.value))} // Actualizar la cantidad seleccionada 
@@ -26,7 +27,7 @@ const BtnAddToCart = ({ dataItem }) => {
                     ))}
                 </Select>
                 <Tooltip label='Agregar a la Nave'>
-                    <Button bg={'#2E4053'} color={'white'}
+                    <Button bg={'#2E4053'} color={'white'} name="Agregar a la Nave"
                         onClick={() => {
                             const productWithQuantity = { ...dataItem, quantity }; // Agregar la cantidad seleccionada al producto
                             addToCart(productWithQuantity); // Llamar a addToCart con el producto actualizado

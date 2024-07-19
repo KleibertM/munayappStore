@@ -28,6 +28,7 @@ const BtnSidebar = ({link, nameRoute, icon}) => {
             bg={' #58D68D'}
             color={'#2E4053'}
             border={'1px solid #2E4053'}
+            name='menu lateral'
             >
                 <Text>{nameRoute}</Text>
                 <Text fontSize={'1.5rem'}>{icon}</Text>

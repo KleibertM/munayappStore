@@ -173,6 +173,7 @@ const Cart = () => {
                                                                 h={"2rem"}
                                                                 w="2rem"
                                                                 objectFit={"cover"}
+                                                                name={book.name}
                                                             />
                                                             <Text fontWeight="bold" fontSize={"1.2rem"}>
                                                                 {book.nombre}
@@ -184,7 +185,7 @@ const Cart = () => {
                                                         <Button
                                                             bg='none'
                                                             onClick={() => deleteItemCart(book)}
-
+                                                            name='borrar articulo'
                                                             color={'red'}
                                                             borderRadius={50}
                                                             h='3rem' w='3rem'
@@ -201,6 +202,7 @@ const Cart = () => {
                                         <Tr w="100%">
                                             <Td>
                                                 <Button onClick={deleteAllCart}
+                                                name='borrar todos los arcitulos'
                                                     borderRadius={50}
                                                     h='3rem' w='3rem'
                                                     colorScheme="red" >
@@ -240,6 +242,7 @@ const Cart = () => {
                                 colorScheme="green"
                                 gap={2}
                                 w={['220px', '220px']}
+                                name='pagar por whatsapp'
                             >
                                 Pagar Pedido en
                                 <Text fontSize={'1.3rem'}>

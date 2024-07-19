@@ -28,7 +28,8 @@ const Sidebar = () => {
       <Button ref={btnRef} bg={'#2E4053'} borderRadius={50} onClick={onOpen}
         h={['40px', '60px']}
         w={['40px', '60px']}
-        position={'relative'}>
+        position={'relative'}
+        name='abrir menu'>
         <Text
           fontSize={'2rem'}
           color={'#58D68D'}>

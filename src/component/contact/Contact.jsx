@@ -10,6 +10,7 @@ const Contact = () => {
                     <Image
                         src={Logo}
                         loading='lazy'
+                        alt='Logo Munay'
                     />
                     <Flex flexWrap={'nowrap'} align={'center'} justify={'center'} gap={4}>
                         <BtnLink icon={<PiEnvelopeSimpleOpenFill />} link={'#'} />

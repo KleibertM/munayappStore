@@ -1,7 +1,5 @@
 import {Flex, Text, Link} from '@chakra-ui/react'
 import { PiWhatsappLogoLight } from "react-icons/pi";
-
-;
 const BtnWhatsapp = () => {
     const whatsappLink = "https://wa.me/51976963819";
     return (
