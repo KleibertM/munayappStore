@@ -1,5 +1,6 @@
 import { Image, Flex, Box } from '@chakra-ui/react'
-import {banners} from '../data.json'
+// import {banners} from '../Data/data.json'
+import { banners } from '../Data/data';
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";

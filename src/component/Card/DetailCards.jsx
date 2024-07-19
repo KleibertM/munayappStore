@@ -5,17 +5,17 @@ import { Box, Badge, Flex, Heading, Text, Container, Accordion, AccordionItem,
     AccordionPanel,
     AccordionIcon, } from '@chakra-ui/react'
 import { BsCart4 } from "react-icons/bs";
-import { data } from '../data.json'
+import { dataMunay } from '../Data/data'
 import ImageRender from "./ImageRender";
 import BtnAddToCart from "../btn/BtnAddToCart";
-import { lazy, Suspense } from 'react';
+// import { lazy, Suspense } from 'react';
 import MoreItems from "./MoreItems";
 
 // const ImageRender = lazy(()=> import('./ImageRender'))
 
 const DetailCards = () => {
     const { id } = useParams()
-    const filterData = data.filter((item) => item.id === id)
+    const filterData = dataMunay.filter((item) => item.id === id)
     return (
         <>
             {filterData.length ? (

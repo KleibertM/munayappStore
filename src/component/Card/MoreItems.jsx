@@ -1,14 +1,14 @@
 
 import {Flex} from '@chakra-ui/react'
 import CardComponent from './Card'
-import {data} from '../data.json'
+import {dataMunay} from '../Data/data'
 
 const MoreItems = () => {
 
     return (
         <>
             <Flex justify={'center'} align={'center'} gap={10}>
-                {data.map((item) => (
+                {dataMunay.map((item) => (
                     <CardComponent dataItem={item} />
                 ))}
             </Flex>

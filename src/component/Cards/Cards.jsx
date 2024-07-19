@@ -1,9 +1,9 @@
 import CardComponent from '../Card/Card'
-import { data } from '../data.json'
+// import { data } from '../Data/data.json'
+import { dataMunay } from '../Data/data'
 import { Grid, GridItem } from '@chakra-ui/react'
-import React from 'react';
 const CardsContent = ({stateFilter}) => {
-    const filterData = data.filter((item) => item.tipo === stateFilter)
+    const filterData = dataMunay.filter((item) => item.tipo === stateFilter)
     return (
         <>
             <Grid h='auto'

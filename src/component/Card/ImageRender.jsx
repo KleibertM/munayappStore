@@ -27,6 +27,7 @@ const ImageRender = ({ image, name, wImg, hImg }) => {
                         w={wImg}
                         borderRadius={10}
                         overflow={'hidden'}
+                        objectFit={'cover'}
                         loading='lazy'
                     />
                 ))}
