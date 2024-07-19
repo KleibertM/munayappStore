@@ -93,32 +93,6 @@ export const dataMunay = [
 
 
 export const banners = [
-    // {
-    //   image: "https://res.cloudinary.com/dzd6hfguw/image/upload/v1709316014/samples/5_xkg5s8.jpg",
-    //   name: "maracuya"
-    // },
-    // {
-    //   image: "https://res.cloudinary.com/dzd6hfguw/image/upload/v1709316013/samples/3_ocgcpr.jpg",
-    //   name: "fresa"
-    // },{
-    //   image: "https://res.cloudinary.com/dzd6hfguw/image/upload/v1709316013/samples/4_ln46yx.jpg",
-    //   name: "mango"
-    // },{
-    //   image: "https://res.cloudinary.com/dzd6hfguw/image/upload/v1709316014/samples/6_o1fmce.jpg",
-    //   name: "fresa con leche"
-    // },{
-    //   image: "https://res.cloudinary.com/dzd6hfguw/image/upload/v1709316012/samples/10_vlhq7e.jpg",
-    //   name: "lucuma"
-    // },{
-    //   image: "https://res.cloudinary.com/dzd6hfguw/image/upload/v1709316012/samples/9_bc90c3.jpg",
-    //   name: "coco"
-    // },{
-    //   image: "https://res.cloudinary.com/dzd6hfguw/image/upload/v1709316012/samples/8_fizibj.jpg",
-    //   name: "oreo"
-    // },{
-    //   image: "https://res.cloudinary.com/dzd6hfguw/image/upload/v1709316012/samples/7_rwwqji.jpg",
-    //   name: "choco menta"
-    // },
     {
       image: banner1,
       name: 'banner1'

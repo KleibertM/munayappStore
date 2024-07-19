@@ -126,7 +126,7 @@ const Cart = () => {
             <Flex flexDirection={"column"} w={'100%'} justify={'flex-start'} align={'center'} h={'90vh'}>
                 {cart.length ? (
                     <>
-                        <Heading fontSize={"1.3rem"} marginLeft={'1rem'}>Nave de Compras</Heading>
+                        <Heading fontSize={"1.3rem"} marginLeft={'1rem'} fontFamily={'munayTitle'}>Nave de Compras</Heading>
                         <Flex >
                             <TableContainer>
                                 <Table size={["sm", 'lg']}>
@@ -174,8 +174,9 @@ const Cart = () => {
                                                                 w="2rem"
                                                                 objectFit={"cover"}
                                                                 name={book.name}
+                                                                
                                                             />
-                                                            <Text fontWeight="bold" fontSize={"1.2rem"}>
+                                                            <Text fontWeight="bold" fontSize={"1.2rem"} fontFamily={'munayTitle'}>
                                                                 {book.nombre}
                                                             </Text>
                                                         </Flex>
@@ -218,7 +219,7 @@ const Cart = () => {
                                             <Td>
                                                 <Text color={'green'} fontWeight={'bold'}  >  {totalAcortado} </Text>
                                             </Td>
-                                            <Td>
+                                            <Td color={'green'} fontWeight={'bold'}>
                                                 soles
                                             </Td>
                                         </Tr>
@@ -243,6 +244,7 @@ const Cart = () => {
                                 gap={2}
                                 w={['220px', '220px']}
                                 name='pagar por whatsapp'
+                                fontFamily={'munayTitle'}
                             >
                                 Pagar Pedido en
                                 <Text fontSize={'1.3rem'}>

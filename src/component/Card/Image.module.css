@@ -1,0 +1,17 @@
+.image_container {
+    overflow: hidden;
+    border-radius: 10px;
+}
+
+.image_container img {
+    transition: transform 0.5s ease;
+    -webkit-transition: transform 0.5s ease;
+    -moz-transition: transform 0.5s ease;
+    -ms-transition: transform 0.5s ease;
+    -o-transition: transform 0.5s ease;
+}
+
+.image_container:hover img {
+    transform: scale(1.1);
+    /* Escala la imagen al 110% */
+}

@@ -10,8 +10,8 @@ const TabsNav = () => {
   return (
     <Tabs isFitted variant='enclosed'>
       <TabList mb='1em'>
-        <Tab fontSize={'1.5rem'} name='Sabores tradicional'>Tradiconal</Tab>
-        <Tab fontSize={'1.5rem'} name='Sabores especiales' >Especiales</Tab>
+        <Tab fontSize={'1.5rem'} fontFamily={'munayTitle'} name='Sabores tradicional'>Tradicional</Tab>
+        <Tab fontSize={'1.5rem'} fontFamily={'munayTitle'} name='Sabores especiales' >Especiales</Tab>
       </TabList>
       <TabPanels>
         <TabPanel>

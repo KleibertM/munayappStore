@@ -46,6 +46,7 @@ const CardComponent = ({ dataItem }) => {
                                 fontWeight={'bold'}
                                 textShadow={'0 5px 10px #000'}
                                 maxWidth={'2rem'}
+                                fontFamily={'munayTitle'}
                             >
                                 {nombre}
                             </Text>

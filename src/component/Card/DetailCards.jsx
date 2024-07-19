@@ -35,7 +35,7 @@ const DetailCards = () => {
                         <Flex p='6' gap={4} flexDirection={'column'} h={{ base: '400px', md: '550px' }} position={'relative'}  >
                             <Box display='flex' flexDirection={'column'} gap={[4, 8]}>
                                 <Flex justify={'space-between'} align={'center'}>
-                                    <Heading textTransform={'capitalize'} >
+                                    <Heading textTransform={'capitalize'} fontFamily={'munayTitle'}>
                                         {filterData[0].nombre && filterData[0].nombre}
                                     </Heading>
                                     <Badge borderRadius='full' px='2' fontSize={'1.3rem'} colorScheme='green' w={'max-content'}>
@@ -53,8 +53,8 @@ const DetailCards = () => {
                                     <AccordionItem>
                                         <h2>
                                             <AccordionButton>
-                                                <Box as="span" flex='1' textAlign='left'>
-                                                    Ingredientes
+                                                <Box as="span" flex='1' textAlign='left' fontWeight={'bold'}>
+                                                    Ingredientes:
                                                 </Box>
                                                 <AccordionIcon />
                                             </AccordionButton>
@@ -84,7 +84,7 @@ const DetailCards = () => {
                         </Flex>
                     </Box>
                     <Flex p='2' bg='whitesmoke' flexDirection={'column'} position={'relative'}>
-                        <Heading fontSize={'1.3rem'} display={'flex'} gap={2} justifySelf={'center'}>
+                        <Heading fontSize={'1.3rem'} display={'flex'} gap={2} justifySelf={'center'} fontFamily={'munayTitle'}>
                             Mas productos <BsCart4 />
                         </Heading>
                         <Flex overflowX={'scroll'} >

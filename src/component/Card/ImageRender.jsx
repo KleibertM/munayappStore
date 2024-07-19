@@ -2,6 +2,7 @@ import { Image, } from '@chakra-ui/react'
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import style from './Image.module.css'
 
 
 const ImageRender = ({ image, name, wImg, hImg }) => {
@@ -19,18 +20,19 @@ const ImageRender = ({ image, name, wImg, hImg }) => {
         <>
             <Slider {...settings}>
                 {image.map((img, index) => (
-                    <Image
-                        key={index}
-                        src={img}
-                        name={name}
-                        h={hImg}
-                        w={wImg}
-                        borderRadius={10}
-                        overflow={'hidden'}
-                        objectFit={'cover'}
-                        loading='lazy'
-                        alt={name}
-                    />
+                    <div key={index} className={style.image_container}>
+                        <Image
+                            src={img}
+                            name={name}
+                            h={hImg}
+                            w={wImg}
+                            borderRadius={10}
+                            overflow={'hidden'}
+                            objectFit={'cover'}
+                            loading='lazy'
+                            alt={name}
+                        />
+                    </div>
                 ))}
             </Slider>
         </>

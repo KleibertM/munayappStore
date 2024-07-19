@@ -18,6 +18,11 @@
   flex: 1; /* Asegura que el contenido principal ocupe todo el espacio restante */
 }
 
+@font-face {
+  font-family: 'munayTitle';
+  src: url('component/Fonts/BatangasBold700.otf') format('opentype');
+}
+
 @media (max-width: 660px) {
   .main_content {
     margin-top: 60px; /* Ajusta este valor según la altura de tu Navbar */
