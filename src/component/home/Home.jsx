@@ -3,7 +3,7 @@ import Banner from "../Banner/Banner";
 // import BannerText from "../bannerText/BannerText";
 // import TabsNav from "../Tabs/TabsNav";
 import { PiAlienFill, PiFlyingSaucerDuotone } from "react-icons/pi";
-import { lazy, Suspense } from 'react';
+import { lazy } from 'react';
 
 const Items = lazy(()=> import("../Items/Items"))
 const BannerText = lazy(()=> import("../bannerText/BannerText"))
