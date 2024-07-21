@@ -12,7 +12,7 @@
 }
 
 .main_content {
-  margin-top: 80px; /* Ajusta este valor según la altura de tu Navbar */
+  margin-top: 70px; /* Ajusta este valor según la altura de tu Navbar */
   /* padding-top: 20px;  */
   /* Opcional: Si prefieres relleno en lugar de margen */
   flex: 1; /* Asegura que el contenido principal ocupe todo el espacio restante */
