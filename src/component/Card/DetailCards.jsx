@@ -10,12 +10,17 @@ import ImageRender from "./ImageRender";
 import BtnAddToCart from "../btn/BtnAddToCart";
 // import { lazy, Suspense } from 'react';
 import MoreItems from "./MoreItems";
+import { useEffect } from "react";
 
 // const ImageRender = lazy(()=> import('./ImageRender'))
 
 const DetailCards = () => {
     const { id } = useParams()
     const filterData = dataMunay.filter((item) => item.id === id)
+    useEffect(() => {
+        // Esto asegura que el scroll se posicione en la parte superior cuando el componente se monte
+        window.scrollTo(0, 0);
+    }, [filterData]);
     return (
         <>
             {filterData.length ? (
