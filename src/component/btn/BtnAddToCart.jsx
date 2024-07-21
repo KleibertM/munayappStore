@@ -13,6 +13,7 @@ const BtnAddToCart = ({ dataItem }) => {
             <Flex gap={2}>
                 <Select
                     name="elegir cantidad"
+                    border={"none"}
                     w={['5rem', 'auto']}
                     value={quantity}
                     onChange={(e) => setQuantity(parseInt(e.target.value))} // Actualizar la cantidad seleccionada 
