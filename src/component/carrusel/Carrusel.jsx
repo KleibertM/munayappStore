@@ -31,7 +31,7 @@ const Carrusel = () => {
                                     src={img.image}
                                     alt={img.name}
                                     objectFit={'cover'}
-                                    h={{base: '230px', md: '500px'}}
+                                    h={{base: '230px', md: '350px'}}
                                     w={{base: 'auto', md: '100%'}}
                                     loading='lazy'
                                 />
