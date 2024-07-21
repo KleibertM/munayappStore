@@ -18,6 +18,21 @@
   flex: 1; /* Asegura que el contenido principal ocupe todo el espacio restante */
 }
 
+::-webkit-scrollbar {
+  width: .5rem; /* Ancho de la barra de desplazamiento vertical */
+  height: 3px;  /* Altura de la barra de desplazamiento horizontal */
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #58D68D; /* Color del pulgar de la barra de desplazamiento */
+  border-radius: 1rem;       /* Radio del borde del pulgar */
+}
+
+::-webkit-scrollbar-track {
+  background-color: #000;    /* Color de la pista de la barra de desplazamiento */
+  border-radius: 1rem;       /* Radio del borde de la pista */
+}
+
 @font-face {
   font-family: 'munayTitle';
   src: url('component/Fonts/BatangasBold700.otf') format('opentype');
