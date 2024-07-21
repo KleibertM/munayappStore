@@ -7,7 +7,7 @@ const BtnWhatsapp = () => {
         <Flex position={'fixed'} bottom={'1rem'} right={'1rem'} w="50px"
                 h="50px" align={'center'} justify={'center'} borderRadius={50} bg='green' zIndex={99} 
                   _hover={{
-                    boxShadow: "0 0 10px green",
+                    boxShadow: "0px 0px 20px green",
                     transition: "box-shadow 0.3s ease-in-out"
                   }} >
             <Link href={whatsappLink} >

@@ -12,7 +12,7 @@ const Navbar = () => {
 
     return ( 
         <>
-        <Flex justify={'space-between'} align={'center'} h={['60px', '80px']} position={'fixed'} zIndex={999} w={'100vw'} bg={'white'} left={0} paddingX={['20px', '60px']}>
+        <Flex justify={'space-between'} align={'center'} h={['60px', '70px']} position={'fixed'} zIndex={999} w={'100vw'} bg={'white'} left={0} paddingX={['20px', '60px']}>
             <Link to={'/'} >
                 <Avatar size={['md', 'lg']} name='Munay - Marcianos Artesanales' src={Logo} bg={'white'} 
                 loading='lazy' />
