@@ -226,7 +226,7 @@ const Cart = () => {
                                     </Tbody>
                                     <Tfoot>
                                         <Tr>
-                                            <Th>#</Th>
+                                            <Th>cant</Th>
                                             <Th>Producto</Th>
                                             <Th>Precio</Th>
                                             <Th>accion</Th>

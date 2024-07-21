@@ -11,7 +11,6 @@ import BtnAddToCart from "../btn/BtnAddToCart";
 // import { lazy, Suspense } from 'react';
 import MoreItems from "./MoreItems";
 import { useEffect } from "react";
-import { scrollbarStyles } from "../ScrollBarStyles";
 
 // const ImageRender = lazy(()=> import('./ImageRender'))
 
