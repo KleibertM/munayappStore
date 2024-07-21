@@ -174,7 +174,6 @@ const Cart = () => {
                                                                 w="2rem"
                                                                 objectFit={"cover"}
                                                                 name={book.name}
-                                                                
                                                             />
                                                             <Text fontWeight="bold" fontSize={"1.2rem"} fontFamily={'munayTitle'}>
                                                                 {book.nombre}
