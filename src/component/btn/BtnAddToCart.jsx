@@ -36,7 +36,7 @@ const BtnAddToCart = ({ dataItem }) => {
                                 title: 'Agregaste a la Nave.',
                                 description: `Se agrego ${quantity} marcianos de ${dataItem.nombre} a la Nave.`,
                                 status: 'success',
-                                duration: 1000,
+                                duration: 1500,
                                 isClosable: true,
                             });
                         }}
