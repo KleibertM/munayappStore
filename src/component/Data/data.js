@@ -42,8 +42,28 @@ export const dataMunay = [
     tipo: true
   },
   {
+    id: "6",
+    nombre: "Choco Menta",
+    descripcion: "Delicioso marciano de chocolate con menta cremoso.",
+    precio: 1.10,
+    ingredientes: ["Menta (E)", "Chocolate", "Azucar rubia", "Leche evaporada", "Agua botella/hervida"],
+    image: ['https://i.ibb.co/3m7bnwT/1.jpg'],
+    estado: true,
+    tipo: false
+  },
+  {
+    id: "7",
+    nombre: "Lucuma c/ Leche",
+    descripcion: "Delicioso marciano de lucuma cremoso.",
+    precio: 1.10,
+    ingredientes: ["Lucuma", "Azucar rubia", "Leche evaporada", "Agua botella/hervida"],
+    image: ['https://i.ibb.co/FBn2B7k/3.jpg'],
+    estado: true,
+    tipo: false
+  },
+  {
     id: "4",
-    nombre: "Coco",
+    nombre: "Coco ",
     descripcion: "Delicioso marciano de coco con trozos de coco cremoso.",
     precio: 1.10,
     ingredientes: ["Coco", "Azucar refinada", "Leche evaporada", "Agua botella/hervida"],
@@ -58,26 +78,6 @@ export const dataMunay = [
     precio: 1.10,
     ingredientes: ["Oreo", "Azucar rubia", "Leche evaporada", "Agua botella/hervida"],
     image: ['https://i.ibb.co/w0HmZC2/5.jpg'],
-    estado: true,
-    tipo: false
-  },
-  {
-    id: "6",
-    nombre: "Choco Menta",
-    descripcion: "Delicioso marciano de chocolate con menta cremoso.",
-    precio: 1.10,
-    ingredientes: ["Menta (E)", "Chocolate", "Azucar rubia", "Leche evaporada", "Agua botella/hervida"],
-    image: ['https://i.ibb.co/3m7bnwT/1.jpg'],
-    estado: true,
-    tipo: false
-  },
-  {
-    id: "7",
-    nombre: "Lucuma",
-    descripcion: "Delicioso marciano de lucuma cremoso.",
-    precio: 1.10,
-    ingredientes: ["Lucuma", "Azucar rubia", "Leche evaporada", "Agua botella/hervida"],
-    image: ['https://i.ibb.co/FBn2B7k/3.jpg'],
     estado: true,
     tipo: false
   },
