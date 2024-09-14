@@ -28,7 +28,7 @@ const CardComponent = ({ dataItem }) => {
                     outline = {`2px solid ${bgPrice}`}
                 >
                     <Link to={`/detail/${id}`}>
-                        < ImageRender image={image} name={nombre} wImg={'auto'} hImg={'330px'} />
+                        < ImageRender image={image} name={nombre} wImg={'100%'} hImg={'330px'} />
                         <Flex justify={'space-between'}
                             align={'center'}
                             position={'absolute'}
