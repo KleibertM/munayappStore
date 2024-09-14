@@ -8,7 +8,7 @@ const CardsContent = ({stateFilter}) => {
         <>
             <Grid h='auto'
                 templateRows={['repeat(1, 1fr)', 'repeat(2, 1fr)']}
-                templateColumns={['repeat(2, 1fr)', 'repeat(3, 1fr)']}
+                templateColumns={['repeat(2, 1fr)','repeat(2, 1fr)',   'repeat(3, 1fr)']}
                 gap={[4, 8]} position={'relative'} 
                 >
                 {filterData.map((item, index) => (
