@@ -75,17 +75,17 @@ const DetailCards = () => {
                             </Flex>
 
                             <Flex
-                                position={['absolute', "relative"]}
+                                position={'relative'}
                                 justify={'center'}
-                                w={['50%', '50%']}
+                                align={'center'}
+                                w={'max-content'}
                                 bg='#58D68D'
                                 p='1'
                                 h={'auto'}
-                                bottom={[4, 0]}
-                                left={'calc(50% - 25%)'}
-                                borderRadius={50}
+                                margin={'0 auto'}
+                                borderRadius={[50, 50]}
                                 overflow={'hidden'}>
-                                <BtnAddToCart dataItem={filterData[0]} />
+                                <BtnAddToCart dataItem={filterData[0]} FlexDirec={'row'} />
                             </Flex>
                         </Flex>
                     </Box>

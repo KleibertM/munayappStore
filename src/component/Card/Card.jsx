@@ -67,7 +67,7 @@ const CardComponent = ({ dataItem }) => {
                     </Link>
                 </Box>
                 <Flex gap={2} justify={'space-around'} w={['10rem', '250px']}>
-                    < BtnAddToCart  dataItem={dataItem} />
+                    < BtnAddToCart  dataItem={dataItem} FlexDirec={['column','row']} />
                 </Flex>
             </Flex>
         </>
