@@ -7,9 +7,9 @@ const MoreItems = () => {
 
     return (
         <>
-            <Flex justify={'center'} align={'center'} gap={10}>
-                {dataMunay.map((item) => (
-                    <CardComponent dataItem={item} />
+            <Flex justify={'center'} align={'center'} gap={10} paddingY={4} marginX={2}>
+                {dataMunay.map((item, index) => (
+                    <CardComponent dataItem={item} key={index}/>
                 ))}
             </Flex>
         </>

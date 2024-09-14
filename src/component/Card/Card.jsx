@@ -10,10 +10,9 @@ import { lazy } from 'react';
 const ImageRender = lazy(()=> import('./ImageRender'))
  
 const CardComponent = ({ dataItem }) => {
-    const { id, nombre, descripcion, image, precio, ingredientes, estado } = dataItem
+    const { id, nombre, descripcion, image, precio, ingredientes, estado, tipo } = dataItem
     
-    
-
+    let bgPrice = tipo ? '#58D68D' : '#9b59b6';
     return (
         <>
             <Flex flexDirection={'column'} gap={2}
@@ -26,6 +25,7 @@ const CardComponent = ({ dataItem }) => {
                     position={'relative'}
                     borderRadius={10}
                     overflow={'hidden'}
+                    outline = {`2px solid ${bgPrice}`}
                 >
                     <Link to={`/detail/${id}`}>
                         < ImageRender image={image} name={nombre} wImg={'auto'} hImg={'330px'} />
@@ -51,7 +51,7 @@ const CardComponent = ({ dataItem }) => {
                                 {nombre}
                             </Text>
 
-                            <Text bg={'#58D68D'}
+                            <Text bg={bgPrice}
                                 borderRadius={20}
                                 paddingX={2}
                                 fontWeight={'bold'}
