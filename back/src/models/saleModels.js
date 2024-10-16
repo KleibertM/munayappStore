@@ -3,21 +3,17 @@ const {DataTypes} = require('sequelize');
 module.exports = (sequelze) => {
     sequelze.define('sale', {
         sale_id: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.UUID,
             primaryKey: true,
-            autoIncrement: true
+            defaultValue: DataTypes.UUIDV4
         },
-        ice_id: {
-            type: DataTypes.INTEGER,
+        order_id: {
+            type: DataTypes.UUID,
             allowNull: false,
             references: {
-                model: 'ice',
-                key: 'id_ice'
+                model: 'order',
+                key: 'order_id',
             }
-        },
-        sale_cant: {
-            type: DataTypes.INTEGER,
-            allowNull: false
         },
         sale_date: {
             type: DataTypes.DATEONLY,

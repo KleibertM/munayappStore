@@ -1,26 +1,27 @@
 const {DataTypes} = require('sequelize');
-
+const unMedid = ['kg', 'litro', 'unidad']
 module.export = (sequelize) => {
     sequelize.define('investing', {
         investing_id: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.UUID,
             primaryKey: true,
-            autoIncrement: true
+            defaultValue: DataTypes.UUIDV4
         },
-        ingredient_id: {
-            type: DataTypes.INTEGER,
-            references: {
-                model: 'ingredients',
-                key: 'ingredient_id'
-            }
+        ingredient_name: {
+            type: DataTypes.STRING,
+            allowNull: false
         },
-        investing_uni: {
-            type: DataTypes.DECIMAL(10, 2),
-            allowNull: true
+        investing_type: {
+            type: DataTypes.ENUM(...unMedid),
+            allowNull: false
         },
         investing_cant: {
             type: DataTypes.DECIMAL(10, 2),
-            allowNull: true
+            allowNull: false
+        },
+        investing_price: {
+            type: DataTypes.DECIMAL(10, 2),
+            allowNull: false
         },
         investing_date: {
             type: DataTypes.DATE,
@@ -28,7 +29,7 @@ module.export = (sequelize) => {
         },
         investing_total: {
             type: DataTypes.DECIMAL(10, 2),
-            allowNull: true
+            allowNull: false
         }
     })
 }
