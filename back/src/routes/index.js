@@ -1,12 +1,13 @@
 const { Router } = require('express');
+const iceRouter = require('./iceRouter');
 
 const router = Router();
 
-router.use('/book', iceRouter);
-router.use('/book', saleRouter);
-router.use('/book', investingRouter);
-router.use('/book', userRouter);
-router.use('/book', categoryRouter);
-router.use('/book', ingredientRouter);
+router.use('/ice', iceRouter);
+// router.use('/sale', saleRouter);
+// router.use('/invest', investingRouter);
+// router.use('/user', userRouter);
+// router.use('/category', categoryRouter);
+// router.use('/ingredient', ingredientRouter);
 
 module.exports = router;

@@ -26,6 +26,10 @@ module.exports = (sequelize) => {
             type: DataTypes.ARRAY(DataTypes.STRING),
             allowNull: false,
         },
+        category_ice: {
+            type: DataTypes.UUID(),
+            allowNull: false
+        },
         type_ice: {
             type: DataTypes.BOOLEAN,
             allowNull: false
