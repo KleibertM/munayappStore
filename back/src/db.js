@@ -3,6 +3,9 @@ const {Sequelize} = require('sequelize')
 const {DB_USER, DB_PASSWORD, DB_HOST, DB_NAME, DATABASE_URL} = process.env
 const { Pool } = require('pg');
 
+const pool = new Pool({
+    connectionString: DATABASE_URL
+  });
 //MODELOS
 
 const iceModels = require('./models/iceModels')
@@ -14,10 +17,13 @@ const productionModels  = require('./models/productionModels')
 const categoryModels = require('./models/categoryModels')
 
 
-const sequelize = new Sequelize(`postgres://${DB_USER}:${DB_PASSWORD}@${DB_HOST}/${DB_NAME}`, {
+const sequelize = new Sequelize(DATABASE_URL, {
     logging: false,
     native: false,
-});
+    dialectOptions: {
+      ssl: true,
+    },
+  });
 
 iceModels(sequelize)
 
