@@ -1,7 +1,7 @@
 const {DataTypes} = require('sequelize');
 const unMedid = ['kg', 'litro', 'unidad']
-module.export = (sequelize) => {
-    sequelize.define('investing', {
+module.exports = (sequelize) => {
+    sequelize.define('Investing', {
         investing_id: {
             type: DataTypes.UUID,
             primaryKey: true,
@@ -31,5 +31,5 @@ module.export = (sequelize) => {
             type: DataTypes.DECIMAL(10, 2),
             allowNull: false
         }
-    })
+    }, {timestamps: false})
 }

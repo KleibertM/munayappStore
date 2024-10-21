@@ -1,29 +1,30 @@
+const {Ice,Category} = require('../../db');
+
 const createIceController = async (
     name_ice,
     price_ice,
     about_ice,
-    image_ice,
-    ice_type,
+    img_ice,
+    type_ice,
     category_ice
 ) => {
     try {
-        if(!category_ice || category_ice.length === 0) {
+        if(!category_name || category_name.length === 0) {
             throw new Error('Debe seleccionar una categoría.');
         }
-        const category = category_ice.findAll({
+        const category = Category.findOrCreate({
             where: {
-                name: category_ice
+                category_name: category_name
             }
         })
-        const newIce = await iceModels.create({
+        const newIce = await Ice.create({
             name_ice,
             price_ice,
             about_ice,
-            image_ice,
-            ice_type,
-            category_ice
+            img_ice,
+            type_ice,
+            category_ice: category[0].category_id
         })
-        await newIce.addCategories(category);
         return newIce;
     } catch (error) {
         console.error("Error en el create ice Controllers: " + error.message);

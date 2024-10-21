@@ -1,7 +1,9 @@
 const {DataTypes,} = require('sequelize')
 
+const categoryEnum = ['TRADICIONAL', 'ESPECIAL', 'BOX', 'GLUTEN-FREE']
+
 module.exports = (sequelize) => {
-    sequelize.define('ice', {
+    sequelize.define('Ice', {
         id_ice: {
             type: DataTypes.UUID,
             primaryKey: true,
@@ -26,10 +28,6 @@ module.exports = (sequelize) => {
             type: DataTypes.ARRAY(DataTypes.STRING),
             allowNull: false,
         },
-        category_ice: {
-            type: DataTypes.UUID(),
-            allowNull: false
-        },
         type_ice: {
             type: DataTypes.BOOLEAN,
             allowNull: false
@@ -37,6 +35,9 @@ module.exports = (sequelize) => {
         status_ice: {
             type: DataTypes.BOOLEAN,
             defaultValue: true,
+        },
+        category_ice: {
+            type: DataTypes.ENUM(...categoryEnum), // Agregar el campo category con ENUM
             allowNull: false
         }
     }, {timestamps: false})

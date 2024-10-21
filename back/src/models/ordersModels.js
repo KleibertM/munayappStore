@@ -3,7 +3,7 @@ const {DataTypes,} = require('sequelize')
 const statusEnum = ['pending', 'complete'];
 
 module.exports = (sequelize) => {
-    sequelize.define('order', {
+    sequelize.define('Order', {
         order_id: {
             type: DataTypes.UUID,
             primaryKey: true,
@@ -12,18 +12,10 @@ module.exports = (sequelize) => {
         ice_id: {
             type: DataTypes.UUID,
             allowNull: false,
-            references: {
-                model: 'ice',
-                key: 'id_ice'
-            }
         },
         user_id: {
             type: DataTypes.UUID,
-            allowNull: false,
-            references: {
-                model: 'user',
-                key: 'user_id'
-            }
+            allowNull: true,
         },
         order_price: {
             type: DataTypes.DECIMAL(10, 2),

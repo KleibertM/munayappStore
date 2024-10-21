@@ -1,7 +1,7 @@
 const {DataTypes} = require('sequelize');
 
 module.exports = (sequelize) => {
-    sequelize.define('user', {
+    sequelize.define('User', {
         user_id: {
             type: DataTypes.UUID,
             primaryKey: true,
@@ -21,7 +21,7 @@ module.exports = (sequelize) => {
             unique: true
         },
         user_phone: {
-            type: DataTypes.NUMBER,
+            type: DataTypes.INTEGER,
             allowNull: false
         },
         user_roll: {

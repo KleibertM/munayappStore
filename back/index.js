@@ -1,6 +1,12 @@
 const app = require('./src/server')
 const { PORT } = require('./src/config');
-    
-app.listen(PORT, () => {
+const { conn } = require('./src/db');
+
+conn.sync({ force: false})
+.then(() => {
+    app.listen(PORT, () => {
         console.log('Server raised in port: ' + PORT);
     })
+}).catch((error)=> {
+    console.log("Error while connecting to the database", error)
+});
