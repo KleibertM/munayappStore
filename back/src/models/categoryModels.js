@@ -10,6 +10,9 @@ module.exports = (sequelize) => {
             type: DataTypes.STRING,
             unique: true,
             allowNull: false,
+        },
+        id_ice: {
+            type: DataTypes.UUID,
         }
     }, {timestamps: false})
 }

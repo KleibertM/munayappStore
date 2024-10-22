@@ -7,12 +7,13 @@ module.exports = (sequelize) => {
             primaryKey: true,
             defaultValue: DataTypes.UUIDV4
         },
-        ice_id: {
+        id_ice_fk: {
             type: DataTypes.UUID,
-            references: {
-                model: 'ice',
-                key: 'id_ice'
-            }
+            allowNull: false
+        },
+        investing_id_fk: {
+            type: DataTypes.UUID,
+            allowNull: false
         },
         production_quantity: {
             type: DataTypes.INTEGER,

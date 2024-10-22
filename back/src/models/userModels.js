@@ -22,7 +22,7 @@ module.exports = (sequelize) => {
         },
         user_phone: {
             type: DataTypes.INTEGER,
-            allowNull: false
+            allowNull: true
         },
         user_roll: {
             type: DataTypes.BOOLEAN,

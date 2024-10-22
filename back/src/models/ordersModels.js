@@ -1,4 +1,4 @@
-const {DataTypes,} = require('sequelize')
+const {DataTypes} = require('sequelize')
 
 const statusEnum = ['pending', 'complete'];
 
@@ -9,7 +9,7 @@ module.exports = (sequelize) => {
             primaryKey: true,
             defaultValue: DataTypes.UUIDV4
         },
-        ice_id: {
+        id_ice: {
             type: DataTypes.UUID,
             allowNull: false,
         },

@@ -10,10 +10,6 @@ module.exports = (sequelze) => {
         order_id: {
             type: DataTypes.UUID,
             allowNull: false,
-            references: {
-                model: 'order',
-                key: 'order_id',
-            }
         },
         sale_date: {
             type: DataTypes.DATEONLY,

@@ -36,8 +36,8 @@ module.exports = (sequelize) => {
             type: DataTypes.BOOLEAN,
             defaultValue: true,
         },
-        category_ice: {
-            type: DataTypes.ENUM(...categoryEnum), // Agregar el campo category con ENUM
+        category_id: {
+            type: DataTypes.UUID, // Agregar el campo category con ENUM
             allowNull: false
         }
     }, {timestamps: false})
