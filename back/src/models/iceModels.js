@@ -11,6 +11,7 @@ module.exports = (sequelize) => {
         },
         name_ice: {
             type: DataTypes.STRING(50),
+            unique: true,
             allowNull: false
         },
         price_ice: {
@@ -37,7 +38,7 @@ module.exports = (sequelize) => {
             defaultValue: true,
         },
         category_id: {
-            type: DataTypes.UUID, // Agregar el campo category con ENUM
+            type: DataTypes.INTEGER, // Agregar el campo category con ENUM
             allowNull: false
         }
     }, {timestamps: false})

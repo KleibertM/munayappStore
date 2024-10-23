@@ -1,6 +1,8 @@
+const {Ice} = require('../../db');
+
 const updateIceDataController = async (id_ice, newDataIce) => {
     try {
-        const data = await iceRouter.findByPk(id_ice)
+        const data = await Ice.findByPk(id_ice)
         if (!data) {
             throw new Error('El helado no existe');
         }

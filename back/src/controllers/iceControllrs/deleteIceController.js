@@ -1,5 +1,6 @@
+const {Ice} = require('../../db');
 const deleteIceController = async (id_ice) => {
-    const iceDelete = await iceModels.findByPk(id_ice)
+    const iceDelete = await Ice.findByPk(id_ice)
 
     try {
         if (iceDelete){
