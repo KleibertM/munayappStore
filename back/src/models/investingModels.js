@@ -14,7 +14,7 @@ module.exports = (sequelize) => {
         investing_type: {
             type: DataTypes.ENUM(...unMedid),
             allowNull: false
-        },
+        },  
         investing_cant: {
             type: DataTypes.DECIMAL(10, 2),
             allowNull: false
