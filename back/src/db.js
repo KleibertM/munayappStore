@@ -37,9 +37,9 @@ categoryModels(sequelize);
 const { Ice, Sale, Order, User, Investing, Production, Category } = sequelize.models;
 
 Ice.belongsTo(Category, { foreignKey: 'category_id' });
+Category.hasMany(Ice, { foreignKey: 'category_id' });
 Ice.hasMany(Order, { foreignKey: 'id_ice' });
 Ice.hasMany(Production, { foreignKey: 'id_ice' });
-Category.hasMany(Ice, { foreignKey: 'category_id' });
 Order.belongsTo(User, { foreignKey: 'user_id' });
 Order.hasOne(Sale, { foreignKey: 'order_id' });
 Order.belongsTo(Ice, { foreignKey: 'id_ice' });
@@ -48,12 +48,27 @@ User.hasMany(Order, { foreignKey: 'user_id' });
 Investing.hasMany(Production, { foreignKey: 'investing_id' });
 Production.belongsTo(Ice, { foreignKey: 'id_ice' });
 Production.hasMany(Investing, { foreignKey: 'investing_id' });
-
 // Sincronizar modelos
 const syncModels = async () => {
   try {
     await sequelize.sync({ force: false }); // force: true elimina y recrea las tablas; force: false solo crea tablas si no existen
     console.log('Tablas sincronizadas correctamente');
+    const initialCategories = [
+      { category_name: 'Tradicional' },
+      { category_name: 'Especial' },
+      { category_name: 'Box' },
+      { category_name: 'Big-Box' }
+  ];
+  // Insertar las categorías en la base de datos
+  for (const category of initialCategories) {
+    await Category.findOrCreate({
+        where: { category_name: category.category_name },
+        defaults: category
+    });
+    console.log(`Categoría '${category.category_name}' procesada.`);
+}
+
+console.log('Proceso de inserción de categorías completado.');
   } catch (error) {
     console.error('Error al sincronizar tablas:', error);
   }

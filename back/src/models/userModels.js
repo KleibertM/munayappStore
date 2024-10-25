@@ -13,7 +13,11 @@ module.exports = (sequelize) => {
         },
         user_password: {
             type: DataTypes.STRING,
-            allowNull: false
+            set(value) {
+                // Storing passwords in plaintext in the database is terrible.
+                // Hashing the value with an appropriate cryptographic hash function is better.
+                this.setDataValue('user_password', hash(value));
+            },
         },
         user_email: {
             type: DataTypes.STRING,

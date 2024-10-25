@@ -1,7 +1,5 @@
 const {DataTypes,} = require('sequelize')
 
-const categoryEnum = ['TRADICIONAL', 'ESPECIAL', 'BOX', 'GLUTEN-FREE']
-
 module.exports = (sequelize) => {
     sequelize.define('Ice', {
         id_ice: {

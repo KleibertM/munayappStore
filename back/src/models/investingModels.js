@@ -31,5 +31,12 @@ module.exports = (sequelize) => {
             type: DataTypes.DECIMAL(10, 2),
             allowNull: false
         }
-    }, {timestamps: false})
+    }, {timestamps: false,
+        hooks: {
+            beforeCreate: (investing) => {
+                // Calcula el total antes de guardar
+                investing.investing_total = investing.investing_cant * investing.investing_price;
+            }
+        }
+    })
 }
