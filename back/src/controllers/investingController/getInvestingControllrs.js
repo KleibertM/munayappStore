@@ -9,11 +9,12 @@ const getInvestController = async () => {
         }, 0);
         const investingDate = data.length > 0 ? data[0].investing_date : null;
         return {// Retorna los datos de las inversiones
+            data: data,
             Total: total,
             Fecha: investingDate// Retorna el total calculado
         };
     } catch (error) {
-        console.log("Error al obtener una Invest en Controllers: " + error.message + cart);
+        console.log("Error al obtener una Invest en Controllers: " + error.message);
         throw new Error("Error al obtener una Invest en Controllers: " + error.message );
     }
 }

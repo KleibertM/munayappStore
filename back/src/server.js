@@ -22,7 +22,6 @@ const corsOptions = {
 };
 app.use(cors(corsOptions));
 app.use((req,res,next) => {
-    console.log('pasasndo por el moddelware');
     next();
 })
 app.use(router)

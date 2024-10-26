@@ -11,6 +11,6 @@ iceRouter.get('/', getIceDataHandler)
 iceRouter.get('/detail/:id', getDetailIceHandler)
 iceRouter.post('/', createIceHandler)
 iceRouter.delete('/:id', deleteIceHandler)
-iceRouter.put('/:id', updateIceHandler)
+iceRouter.patch('/:id', updateIceHandler)
 
 module.exports = iceRouter

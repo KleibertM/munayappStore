@@ -52,7 +52,6 @@ Production.hasMany(Investing, { foreignKey: 'investing_id' });
 const syncModels = async () => {
   try {
     await sequelize.sync({ force: false }); // force: true elimina y recrea las tablas; force: false solo crea tablas si no existen
-    console.log('Tablas sincronizadas correctamente');
     const initialCategories = [
       { category_name: 'Tradicional' },
       { category_name: 'Especial' },
@@ -65,10 +64,7 @@ const syncModels = async () => {
         where: { category_name: category.category_name },
         defaults: category
     });
-    console.log(`Categoría '${category.category_name}' procesada.`);
 }
-
-console.log('Proceso de inserción de categorías completado.');
   } catch (error) {
     console.error('Error al sincronizar tablas:', error);
   }
