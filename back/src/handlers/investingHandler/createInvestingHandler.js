@@ -3,9 +3,6 @@ const createInvestController = require("../../controllers/investingController/cr
 const createInvestHandler = async (req, res) => {
     try {
         const dataInvest = req.body
-        console.log('create invest');
-        
-        console.log(dataInvest);
         
         const response = await createInvestController(dataInvest)
         res.status(201).json(response);
