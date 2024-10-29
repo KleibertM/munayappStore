@@ -1,4 +1,5 @@
-const { Order, Sale } = require('../../db');
+const { Order } = require('../../db');
+const createSaleController = require('../saleControllrs/createSaleControllrs');
 
 const createOrderController = async (dataOrder) => {
     try {
@@ -28,27 +29,14 @@ const createOrderController = async (dataOrder) => {
             return acc + parseFloat(order.order_total);
         }, 0);
         if (order_pay === 'complete') {
-            for (const order of newOrder) {
-                const dataSale = {
-                    order_id: order.order_id,
-                    sale_date: new Date(),
-                    sale_total: totalGeneral
-                };
-                console.log('data para crea Sale', dataSale);
-                if (!dataSale || dataSale.length === 0) {
-                    console.log("falta datos para crear una Sale: " + error.message + dataSale);
-                    throw new Error("falta datos para crear una Sale: " + error.message);
-                }
-                const newSale = await Sale.create(dataSale)
-                return { message: 'Nueva Sale creada', data: newSale }
-            }
-        } else {
-            console.log('Orden no pagada', newOrder);
+            const saleCreate = await createSaleController(newOrder, totalGeneral)
             return {
-                message: 'Orden no pagada',
-                data: newOrder
+                message: 'Order and Sale created',
+                Order: newOrder,
+                totalGeneral: totalGeneral,
+                data: saleCreate
             }
-        }
+        } 
         return {
             Order: newOrder,
             totalGeneral: totalGeneral
