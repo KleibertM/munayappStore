@@ -90,6 +90,27 @@ export const dataMunay = [
     image: ['https://i.ibb.co/x1YmbKQ/2.jpg'],
     estado: true,
     tipo: false
+  },
+  {
+    id: "9",
+    nombre: "Ron Pasas",
+    descripcion: "Delicioso marciano de Ron con Pasas y trozos de pasas.",
+    precio: 1.10,
+    ingredientes: ["Pasas","Ron", "Azucar", "Leche evaporada", "Agua botella/hervida"],
+    image: ["https://i.ibb.co/vJ4XQ8x/12.jpg"],
+    estado: true,
+    tipo: false
+  }
+  ,
+  {
+    id: "10",
+    nombre: "Cappuccino",
+    descripcion: "Delicioso marciano de cappuccino.",
+    precio: 1.10,
+    ingredientes: ["Cafe", "Azucar", "Leche evaporada", "Agua botella/hervida"],
+    image: ["https://i.ibb.co/ns8SVth/9.jpg"],
+    estado: true,
+    tipo: false
   }
 ];
 
