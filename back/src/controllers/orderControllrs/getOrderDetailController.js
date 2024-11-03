@@ -1,18 +1,25 @@
-const {Ice} = require('../../db');
-const getDetailIceController = async (id_ice)=> {
-    const detailIce = await Ice.findByPk(id_ice)
+const {Order} = require('../../db');
+const getDetailOrderController = async (id)=> {
+    
+    const detailIce = await Order.findByPk(id)
     if (!detailIce) {
         throw new Error('El helado no existe');
     }
 
     const data = await detailIce.toJSON();
-    const dataIce = {
+    console.log('Data de Order detail', data);
+    
+    const user = data.user_id ? data.user_id : null;
+    const dataOrder = {
         id_ice: data.id_ice,
-        name_ice: data.name_ice,
-        price_ice: data.price_ice,
-        about_ice: data.about_ice,
-        category_id: data.category_id.category_name,
+        user_id: user,
+        order_price: data.order_price,
+        ice_quantity: data.ice_quantity,
+        order_date: data.order_date,
+        order_status: data.order_status,
+        order_payment: data.order_payment,
+        order_total: data.order_total,
     }
-    return dataIce;
+    return dataOrder;
 }
-module.exports = getDetailIceController;
+module.exports = getDetailOrderController;

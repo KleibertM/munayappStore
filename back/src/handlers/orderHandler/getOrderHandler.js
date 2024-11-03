@@ -1,6 +1,7 @@
-const getOrderDataController = require("../../controllers/orderControllrs/getOrderController")
+const getOrderDataController = require("../../controllers/orderControllrs/getOrderController");
 
 const getOrderDataHandler = async (req, res) => {
+    
     try {
         const response = await getOrderDataController()
         res.status(200).json(response)

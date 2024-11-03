@@ -1,24 +1,24 @@
-const {Ice} = require('../../db');
-const deleteIceController = async (id_ice) => {
-    const iceDelete = await Ice.findByPk(id_ice)
+const {Order} = require('../../db');
+const deleteOrderController = async (order_id) => {
+    const OrderDelete = await Order.findByPk(order_id)
 
     try {
-        if (iceDelete){
-            const ice = await ice.destroy({
+        if (OrderDelete){
+            const Order = await Order.destroy({
                 where: {
-                    id_ice
+                    order_id
                 },
             })
 
-            if (ice) {console.log({message: 'delete ice'});
-            return ice}
+            if (Order) {console.log({message: 'delete Order'});
+            return Order}
             else {
-                throw new Error('No se pudo eliminar el ice')
+                throw new Error('No se pudo eliminar el Order')
             }
             
         } 
         else {
-            throw new Error('El ice no existe')
+            throw new Error('El Order no existe')
         }
     } catch (error) {
         console.log(error.message);
@@ -26,4 +26,4 @@ const deleteIceController = async (id_ice) => {
     }
 }
 
-module.exports = deleteIceController;
+module.exports = deleteOrderController;

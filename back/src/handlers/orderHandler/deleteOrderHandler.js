@@ -1,29 +1,14 @@
-const {Ice} = require('../../db');
-const deleteIceController = async (id_ice) => {
-    const iceDelete = await Ice.findByPk(id_ice)
+const deleteOrderController = require("../../controllers/orderControllrs/deleteOrderController");
 
+const deleteOrderHandler = async (req,res) => {
+    const {order_id} = req.params
     try {
-        if (iceDelete){
-            const ice = await ice.destroy({
-                where: {
-                    id_ice
-                },
-            })
-
-            if (ice) {console.log({message: 'delete ice'});
-            return ice}
-            else {
-                throw new Error('No se pudo eliminar el ice')
-            }
-            
-        } 
-        else {
-            throw new Error('El ice no existe')
-        }
+        const response = await deleteOrderController(order_id)
+        res.status(200).json(response)
     } catch (error) {
         console.log(error.message);
-        throw new Error(`Error al eliminar el helado: ${error.message}`);
+        throw new Error(`Error al eliminar el helado en handler: ${error.message}`);
     }
 }
 
-module.exports = deleteIceController;
+module.exports = deleteOrderHandler;
