@@ -1,17 +1,15 @@
 const {Order} = require('../../db');
-const deleteOrderController = async (order_id) => {
-    const OrderDelete = await Order.findByPk(order_id)
-
+const deleteOrderController = async (id) => {
+    const orderDelete = await Order.findByPk(id)
     try {
-        if (OrderDelete){
-            const Order = await Order.destroy({
+        if (orderDelete){
+            const deleteOrder = await Order.destroy({
                 where: {
-                    order_id
+                    order_id: id
                 },
             })
-
-            if (Order) {console.log({message: 'delete Order'});
-            return Order}
+            if (deleteOrder) {console.log({message: 'delete Order'});
+            return deleteOrder}
             else {
                 throw new Error('No se pudo eliminar el Order')
             }

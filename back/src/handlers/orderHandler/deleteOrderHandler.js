@@ -1,9 +1,10 @@
 const deleteOrderController = require("../../controllers/orderControllrs/deleteOrderController");
 
 const deleteOrderHandler = async (req,res) => {
-    const {order_id} = req.params
+    const {id} = req.params
+    console.log('id deleted',id);
     try {
-        const response = await deleteOrderController(order_id)
+        const response = await deleteOrderController(id)
         res.status(200).json(response)
     } catch (error) {
         console.log(error.message);
