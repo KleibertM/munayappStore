@@ -7,12 +7,16 @@ module.exports = (sequelize) => {
             primaryKey: true,
             defaultValue: DataTypes.UUIDV4
         },
-        id_ice_fk: {
+        id_ice: {
             type: DataTypes.UUID,
             allowNull: false
         },
-        investing_id_fk: {
+        ingredient_id: {
             type: DataTypes.UUID,
+            allowNull: false
+        },
+        ingredient_cant: {
+            type: DataTypes.DECIMALDECIMAL(10, 2),
             allowNull: false
         },
         production_quantity: {

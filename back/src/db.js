@@ -23,6 +23,7 @@ const ordersModels = require('./models/ordersModels');
 const investingModels = require('./models/investingModels');
 const productionModels = require('./models/productionModels');
 const categoryModels = require('./models/categoryModels');
+const ingredientsModels = require('./models/ingredientModels');
 
 // Definir modelos
 iceModels(sequelize);
@@ -32,9 +33,10 @@ ordersModels(sequelize);
 investingModels(sequelize);
 productionModels(sequelize);
 categoryModels(sequelize);
+ingredientsModels(sequelize);
 
 // Relaciones entre modelos
-const { Ice, Sale, Order, User, Investing, Production, Category } = sequelize.models;
+const { Ice, Sale, Order, User, Investing, Production, Category, Ingredients } = sequelize.models;
 
 Ice.belongsTo(Category, { foreignKey: 'category_id' });
 Category.hasMany(Ice, { foreignKey: 'category_id' });
@@ -48,6 +50,7 @@ User.hasMany(Order, { foreignKey: 'user_id' });
 Investing.hasMany(Production, { foreignKey: 'investing_id' });
 Production.belongsTo(Ice, { foreignKey: 'id_ice' });
 Production.hasMany(Investing, { foreignKey: 'investing_id' });
+Ingredients.hasMany(Investing, { foreignKey: 'ingred_id' });
 // Sincronizar modelos
 const syncModels = async () => {
   try {

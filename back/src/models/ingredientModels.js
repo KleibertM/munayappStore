@@ -1,7 +1,7 @@
 const {DataTypes} = require('sequelize');
 const unMedid = ['kg', 'litro', 'unidad']
 module.exports = (sequelize) => {
-    sequelize.define('ingredients', {
+    sequelize.define('Ingredients', {
         ingred_id: {
             type: DataTypes.UUID,
             primaryKey: true,
@@ -19,8 +19,8 @@ module.exports = (sequelize) => {
             type: DataTypes.ENUM(...unMedid),
             allowNull: false
         },
-        id_ice_fk: {
-            type: DataTypes.UUID,
+        ingredient_price: {
+            type: DataTypes.DECIMAL(10, 2),
             allowNull: false
         }
     }, {timestamps: false})

@@ -6,7 +6,7 @@ const createProductionController = async (dataProduction) => {
         const orderArray = Array.isArray(dataProduction) ? dataProduction : [dataProduction];
         const productionData = orderArray.map((production) => {
             const ice = production.id_ice_fk;
-            const investing = production.inversion_id_fk; // Agregar este campo en la tabla de inversiones
+            const investing = production.investing_id_fk; // Agregar este campo en la tabla de inversiones
             const quantity = production.production_quantity
             return {
                 id_ice_fk: ice,
@@ -17,9 +17,7 @@ const createProductionController = async (dataProduction) => {
         })
         // Crear el nuevo ice
         const newProduction = await Production.bulkCreate(productionData, { returning: true });
-        return {
-            Production: newProduction
-        };
+        return { newProduction };
     } catch (error) {
         console.error("Error en el create production Controllers: " + error.message);
         throw new Error("Error en el create production Controllers: " + error.message);
