@@ -124,7 +124,7 @@ const Cart = () => {
     }
     return (
         <>
-            <Flex flexDirection={"column"} w={'100%'} justify={'flex-start'} align={'center'} h={'90vh'}>
+            <Flex flexDirection={"column"} w={'100%'} justify={'flex-start'} align={'center'} h={'auto'} >
                 {cart.length ? (
                     <>
                         <Heading fontSize={"1.3rem"} marginLeft={'1rem'} fontFamily={'munayTitle'}>Nave de Compras</Heading>
