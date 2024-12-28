@@ -56,7 +56,7 @@ export function CartProvider({ children }) {
         if (productIndex >= 0) {
             const newCart = [...cart]; // Clonar el carrito para evitar mutaciones directas
             // Verificar si la cantidad es mayor a 1 antes de decrementar
-            if (newCart[productIndex].quantity > 1) {
+            if (newCart[productIndex].quantity > 12) {
                 newCart[productIndex].quantity -= 1; // Decrementar la cantidad del producto
                 const newTotal = calculateTotal(newCart);
                 localStorage.setItem('cart', JSON.stringify(newCart));
