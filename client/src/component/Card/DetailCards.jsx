@@ -80,7 +80,7 @@ const DetailCards = () => {
                                 align={'center'}
                                 w={'max-content'}
                                 bg='#58D68D'
-                                p='1'
+                                p='2'
                                 h={'auto'}
                                 margin={'0 auto'}
                                 borderRadius={[50, 50]}
