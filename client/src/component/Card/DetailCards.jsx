@@ -51,7 +51,7 @@ const DetailCards = () => {
                             </Box>
 
                             <Flex h={['auto', 'auto']} overflow={'hidden'} py='2' flexDirection={'column-reverse'}>
-                                <Container overflowY={'auto'} textTransform={'capitalize'}>
+                                <Container overflowY={'auto'} >
                                     {filterData[0].descripcion}
                                 </Container>
 
