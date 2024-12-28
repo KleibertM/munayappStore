@@ -53,6 +53,7 @@ const Cart = () => {
             }
             updateCart()
         }
+        window.scrollTo(0, 0);
     }, []);
 
     const totalAcortado = total.toFixed(2);
