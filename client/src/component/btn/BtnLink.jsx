@@ -2,7 +2,7 @@ import { Button, Link as ChakraLink, Text } from '@chakra-ui/react'
 
 const BtnLink = ({link, icon}) => {
     return (
-            <ChakraLink href={link}>
+            <ChakraLink href={link} target="_blank">
                     <Button bg={'#000'} variant='outline' borderRadius={50}
                     h={['40px', '50px']}
                     w={['40px', '50px']}
