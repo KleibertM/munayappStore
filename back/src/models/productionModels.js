@@ -16,7 +16,7 @@ module.exports = (sequelize) => {
             allowNull: false
         },
         ingredient_cant: {
-            type: DataTypes.DECIMALDECIMAL(10, 2),
+            type: DataTypes.DECIMAL(10, 2),
             allowNull: false
         },
         production_quantity: {

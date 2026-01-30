@@ -1,5 +1,6 @@
 const createIceController = require("../../controllers/iceControllrs/createIceController")
 
+
 const createIceHandler = async (req, res) => {
     try {
         const {name_ice, price_ice, about_ice, img_ice,type_ice, category_id} = req.body
