@@ -6,7 +6,7 @@ import { PiFlyingSaucerBold } from "react-icons/pi";
 const BtnAddToCart = ({ dataItem, FlexDirec }) => {
     const { addToCart } = useCart()
     const toast = useToast()
-
+    let bgPrice = dataItem.tipo ? '#58D68D' : '#9b59b6';
     const [quantity, setQuantity] = useState(12);
     return (
         <>
@@ -15,7 +15,7 @@ const BtnAddToCart = ({ dataItem, FlexDirec }) => {
             gap={2}>
                 <Select
                     name="elegir cantidad"
-                    border={"2px solid #2E4053"}
+                    border={`2px solid ${bgPrice}`}
                     borderRadius={'9999px'}
                     w={['auto', 'auto']}
                     value={quantity}
@@ -31,7 +31,7 @@ const BtnAddToCart = ({ dataItem, FlexDirec }) => {
                     ))}
                 </Select>
                 <Tooltip label='Agregar a la Nave'>
-                    <Button bg={'#2E4053'} color={'white'} name="Agregar a la Nave" gap={2}
+                    <Button bg={bgPrice} color={'white'} name="Agregar a la Nave" gap={2}
                         onClick={() => {
                             const productWithQuantity = { ...dataItem, quantity }; // Agregar la cantidad seleccionada al producto
                             addToCart(productWithQuantity); // Llamar a addToCart con el producto actualizado

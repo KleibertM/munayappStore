@@ -25,7 +25,7 @@ const CardComponent = ({ dataItem }) => {
                     position={'relative'}
                     borderRadius={10}
                     overflow={'hidden'}
-                    outline = {`2px solid ${bgPrice}`}
+                    boxShadow={'0 4px 10px #000'}
                 >
                     <Link to={`/detail/${id}`}>
                         < ImageRender image={image} name={nombre} wImg={'100%'} hImg={'330px'} />
